@@ -1,24 +1,41 @@
 import logo from './logo.svg';
-import './App.css';
-
+import './App.scss';
+import TodoList from './components/TodoList';
+import Nav from './components/Nav';
+import AddnewProduct from './components/AddnewProduct';
+import Product from './components/Products/Products';
+import Covid from './components/Covid';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from "react-router-dom";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <Nav />
+        <header className="App-header">
+          <div className='logo'><img src={logo} className="App-logo" alt="logo" /></div>
+          <Switch>
+            <Route path="/" exact={true}>
+              <TodoList />
+            </Route>
+            <Route path="/addnew">
+              <div className='add'>
+                <AddnewProduct />
+              </div>
+            </Route>
+            <Route path="/product">
+              <Product />
+            </Route>
+            <Route path="/covid">
+              <Covid />
+            </Route>
+          </Switch>
+        </header>
+      </div>
+    </Router>
   );
 }
 

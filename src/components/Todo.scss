@@ -1,0 +1,26 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .List-todo {
+        width: 30%;
+    }
+    .product{
+        width: 50%;
+    }
+}
+.fieldset{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 40rem;
+    input{
+        width: 30rem;
+    }
+    button{
+        width: 10rem;
+        text-align: center;
+    }
+}
