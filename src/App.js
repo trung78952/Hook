@@ -14,8 +14,9 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <Nav />
+        
         <header className="App-header">
+        <Nav />
           <div className='logo'><img src={logo} className="App-logo" alt="logo" /></div>
           <Switch>
             <Route path="/" exact={true}>
