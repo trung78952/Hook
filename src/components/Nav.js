@@ -5,7 +5,7 @@ const Nav = () => {
         <ul>
             <li><NavLink activeClassName="active" to="/" exact>To do list</NavLink></li>
             <li><NavLink activeClassName='active' to="/addnew">Add new</NavLink></li>
-            <li><NavLink activeClassName="active" to="/product">Product</NavLink></li>
+            <li><NavLink activeClassName="active" to="/user">User</NavLink></li>
             <li><NavLink activeClassName="active" to="/covid">Covid</NavLink></li>
         </ul>
     )

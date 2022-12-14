@@ -1,0 +1,13 @@
+
+.user-layout{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .table-user{
+        width: 80%;
+    }
+    tr:hover{
+        background-color: rgb(53, 77, 69);
+    }
+}

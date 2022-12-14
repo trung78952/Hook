@@ -3,8 +3,9 @@ import './App.scss';
 import TodoList from './components/TodoList';
 import Nav from './components/Nav';
 import AddnewProduct from './components/AddnewProduct';
-import Product from './components/Products/Products';
+import User from './components/Products/User';
 import Covid from './components/Covid';
+import Detailuser from './components/Products/Detailuser';
 import {
   BrowserRouter as Router,
   Switch,
@@ -27,11 +28,14 @@ function App() {
                 <AddnewProduct />
               </div>
             </Route>
-            <Route path="/product">
-              <Product />
+            <Route path="/user" exact>
+              <User />
             </Route>
             <Route path="/covid">
               <Covid />
+            </Route>
+            <Route path="/user/:id">
+              <Detailuser />
             </Route>
           </Switch>
         </header>
