@@ -3,7 +3,7 @@ const ListTodo = (props) => {
     const handleDelete = (job) => {
         props.handleDelete(job)
     }
-    console.log('check props', props)
+    // console.log('check props', props)
     let todoList = props.todoList
     return (
         <>

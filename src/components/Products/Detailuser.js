@@ -4,11 +4,15 @@ import axios from "axios"
 const Detailuser = (props) => {
     const [user, setUser] = useState([])
     useEffect(async () => {
+        try{
         let id = props.match.params.id
         let res = await axios.get(`https://reqres.in/api/users/${id}`)
         let datauser = res && res.data.data ? res.data.data : [];
         setUser(datauser)
         console.log('check id:', res)
+        }catch(e){
+            console.log(e)
+        }
     }, [])
     console.log('check props', props)
     return (
